@@ -14,25 +14,25 @@
 </h:head>
 <script>
 
-//Fazendo a validaÁ„o dos campos
+//Fazendo a valida√ß√£o dos campos
 		function verificarCampos(){
-			//Vari·veis recebendo o valor das vari·veis da classe "Despesas"
+			//Vari√°veis recebendo o valor das vari√°veis da classe "Despesas"
 			var data = document.getElementById("f:data").value;
 			var descricao = document.getElementById("f:descricao").value;
 			var valor = document.getElementById("f:valor").value;
-		//LaÁo para validar se algum campo estiver vazio, irar mostrar um alerta na tela
+		//La√ßo para validar se algum campo estiver vazio, irar mostrar um alerta na tela
 			if(data ==""){
-				alert("Data n„o Preenchida");
+				alert("Data n√£o Preenchida");
 				return false;
 				
 			}else{
 				if(descricao ==""){
-					alert("DescriÁ„o n„o Preenchido");
+					alert("Descri√ß√£o n√£o Preenchido");
 					return false;
 				}else{
 					
 					if(valor ==""){
-					alert("Valor n„o Preenchido");
+					alert("Valor n√£o Preenchido");
 					return false;}
 					
 					
@@ -50,9 +50,9 @@
 
 
 
-	<!-- Criando um formul·rio fixo, o usu·rio dever· colocar a data, a descriÁ„o e um valor -->
+	<!-- Criando um formul√°rio fixo, o usu√°rio dever√° colocar a data, a descri√ß√£o e um valor -->
 	
-	<!--  Inicialmente, todas as informaÁıes do usu·rio ser· enviadas para trÍs vari·veis temporarias "data1, desc1, valor1" que v„o receber as infomaÁıes do usu·rio e fazer a ligaÁ„o do Bean ao objeto -->
+	<!--  Inicialmente, todas as informa√ß√µes do usu√°rio ser√° enviadas para tr√™s vari√°veis temporarias "data1, desc1, valor1" que v√£o receber as infoma√ß√µes do usu√°rio e fazer a liga√ß√£o do Bean ao objeto -->
 	<ui:define name="conteudo">
 	
 	<h:outputStylesheet library = "css" name = "styles.css" /> 
@@ -68,7 +68,7 @@
 	</h:column>
 	
 	<h:column>
-	<h:outputText value="DescriÁ„o"></h:outputText>
+	<h:outputText value="Descri√ß√£o"></h:outputText>
 	<br/>
 	<h:inputText value="#{tabela.desc1}" id="descricao"></h:inputText>
 	</h:column>
@@ -78,7 +78,7 @@
 	<br/>
 	<h:inputText value="#{tabela.valor1}" id="valor"></h:inputText>
 	</h:column>
-	<!-- Enviando o Formul·rio -->
+	<!-- Enviando o Formul√°rio -->
 	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.data1,tabela.desc1,tabela.valor1)}" onclick="return verificarCampos()"></h:commandButton>
 	</h:panelGrid>
 	</h:panelGroup>
@@ -102,11 +102,11 @@
 			<th class="cabecalho">operacao</th>
 						
 			</tr>
-			<!-- Todas ver que adicionar um objeto, ir· se repetir tudo que est· dentro do "repeat" -->
+			<!-- Todas as vezes que adicionar um novo objeto, ir√° se repetir tudo que est√° dentro do "repeat" -->
 			<ui:repeat value="#{tabela.despesas}" var="d" varStatus="st">
 			
 		<tr>
-				<!-- Quando o "edit" estiver como falso, ter· um outputText e se caso estiver verdadeiro, ter· um inputText-->
+				<!-- Quando o "edit" estiver como falso, ter√° um outputText e se caso estiver verdadeiro, ter√° um inputText-->
 				<td class="colNumero" colspan="1">#{st.index +1}</td>
 				<td class="colData" colspan="1">
 				<h:outputText value ="#{d.data}" rendered = "#{!d.edit}"/>
@@ -142,7 +142,7 @@
 		
 		
 		<h:panelGroup rendered="#{tabela.despesas.size() == 0}">
-		<h:outputText value="N„o cadastrado" styleClass="message" ></h:outputText>
+		<h:outputText value="N√£o cadastrado" styleClass="message" ></h:outputText>
 		</h:panelGroup>
 		</center>
 	</h:form>
