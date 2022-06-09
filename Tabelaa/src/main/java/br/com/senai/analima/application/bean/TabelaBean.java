@@ -11,13 +11,15 @@ import br.com.senai.analima.application.model.Despesas;
 
 @SuppressWarnings("serial")
 @Named("tabela")
-@SessionScoped //Enquanto o navegador estiver aberto o Bean estar� em funcionamento.
+@SessionScoped //Enquanto o navegador estiver aberto o Bean estará em funcionamento.
 
 public class TabelaBean implements Serializable {
-	
+	//Criando uma lista de Despesas
 	private List<Despesas> despesasList = new ArrayList<>();
+	//o ListDataModel tem algumas funções diferentes que o List normal
 	private ListDataModel<Despesas> despesas = new ListDataModel<>(despesasList);
 	
+	//Quando é usado o método inserir, será criado uma nova instância e adicionar na lista
 	public String inserir() {	
 	Despesas desp = new Despesas(); 
 	desp.setEdit(true);

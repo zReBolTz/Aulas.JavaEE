@@ -28,6 +28,8 @@
 			
 			
 			<h:column>
+			<!-- Recebendo as informações e enviando para o Bean -->
+		 <!-- Quando a váriavel "edit" estiver null, significa qué que o campo será um outputText, caso estiver true, será um inputText(O usuário poderá escrever no campo) -->
 				<f:facet name="header"> Data </f:facet>
 				<h:outputText value="#{d.data}"  rendered = "#{!d.edit}">
 			 	<!--  <f:convertDateTime pattern ="dd/MM/yyyy"/>-->

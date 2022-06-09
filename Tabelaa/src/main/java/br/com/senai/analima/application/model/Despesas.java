@@ -1,7 +1,7 @@
 package br.com.senai.analima.application.model;
 
 import java.util.Date;
-
+//Objetos e seus atributos
 public class Despesas {
 
 private String data;
