@@ -13,49 +13,49 @@ import javax.inject.Named;
 
 public class PageBean implements Serializable  {
 	
-	private String primNumero;
-	private String segNumero;
-	private String terNumero;
-	private int resultado;
+	private Integer primNumero;
+	private Integer segNumero;
+	private Integer terNumero;
+	private Integer resultado;
 	
 	@Inject
 	private Flash flash;
-	
+	//Realizando a soma
 	public String somar() {
-		flash.put("soma", resultado= Integer.parseInt("primNumero") + Integer.parseInt("segNumero")+ Integer.parseInt("terNumero"));
-		
+		flash.put("soma", resultado= primNumero + segNumero + terNumero);
+		//O método está retornando á página que será redirecionada
 		return "result?faces-redirect=true";
 	}
 
-	public String getPrimNumero() {
+	public Integer getPrimNumero() {
 		return primNumero;
 	}
 
-	public void setPrimNumero(String primNumero) {
+	public void setPrimNumero(Integer primNumero) {
 		this.primNumero = primNumero;
 	}
 
-	public String getSegNumero() {
+	public Integer getSegNumero() {
 		return segNumero;
 	}
 
-	public void setSegNumero(String segNumero) {
+	public void setSegNumero(Integer segNumero) {
 		this.segNumero = segNumero;
 	}
 
-	public String getTerNumero() {
+	public Integer getTerNumero() {
 		return terNumero;
 	}
 
-	public void setTerNumero(String terNumero) {
+	public void setTerNumero(Integer terNumero) {
 		this.terNumero = terNumero;
 	}
 
-	public int getResultado() {
+	public Integer getResultado() {
 		return resultado;
 	}
 
-	public void setResultado(int resultado) {
+	public void setResultado(Integer resultado) {
 		this.resultado = resultado;
 	}
 	
