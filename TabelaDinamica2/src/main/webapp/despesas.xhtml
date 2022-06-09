@@ -50,7 +50,6 @@
 <h:outputStylesheet library = "css" name = "styles.css" /> 
 
 	<!-- Criando um formulário fixo, usuário deverá colocar a data, a descrição e um valor -->
-	<!-- Todas as informações -->
 	<h:form id="f">
 	<center>
 	<h:outputText value="Despesas"/>
@@ -98,6 +97,8 @@
 			<th class="cabecalho">operacao</th>
 						
 			</tr>
+			<!-- o ui:repeat é responsável por repetir alguma função, método ou algo do tipo -->
+			<!-- Neste caso, ele está recebendo os objetos e mostrando na tela-->
 			<ui:repeat value="#{tabela.despesas}" var="d" varStatus="st">
 			
 		<tr>
