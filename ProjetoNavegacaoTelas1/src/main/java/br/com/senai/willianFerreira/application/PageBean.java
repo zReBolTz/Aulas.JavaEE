@@ -11,7 +11,7 @@ import javax.inject.Named;
 @SuppressWarnings("serial")
 public class PageBean implements Serializable {
 	
-	
+	//Enum apresenta um conjunto fixo de valores
 	public enum Pages{
 		page_a, page_b
 	}
@@ -25,7 +25,7 @@ public class PageBean implements Serializable {
 	public void setPage(String page) {
 		this.page = page;
 	}
-	
+	//Fazendo a verificação
 	public Pages go_to(){
 		if("a".equals(page)) {
 			return Pages.page_a;
