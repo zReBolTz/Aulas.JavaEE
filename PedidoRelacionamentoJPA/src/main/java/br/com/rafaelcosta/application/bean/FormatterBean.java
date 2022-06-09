@@ -11,7 +11,7 @@ import javax.inject.Named;
 @Named
 @ApplicationScoped
 public class FormatterBean implements Serializable {
-	
+	//Formatando a String em valor
 	private static final Locale LOCALE_BR = new Locale("pt", "BR");
 	
 	public String formatarMoeda(double valor) {

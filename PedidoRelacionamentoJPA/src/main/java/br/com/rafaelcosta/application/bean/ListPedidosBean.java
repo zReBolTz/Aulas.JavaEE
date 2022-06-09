@@ -34,9 +34,9 @@ public class ListPedidosBean implements Serializable {
 		pedidoBean.pagar(pedidoId, tipo);
 		return "pedidos?faces-redirect=true";
 	}
-	
+	//Ele recebe o id do Produto e aciona o método excluir
 	public String excluir(Integer pedidoId) {
 		pedidoBean.excluir(pedidoId);
-		return "pedidos?faces-redirect=true";
+	return "pedidos?faces-redirect=true";
 	}
 }

@@ -30,7 +30,7 @@ public class EditPedidoBean implements Serializable {
 	
 	private List<Cliente> clientes;
 	private List<Produto> produtos;
-	
+	//Variáveis que recebe o id do cliente e os ids dos produtos
 	private Integer selectedClienteId;
 	private Integer[] selectedProdutosIds;
 	
@@ -40,6 +40,7 @@ public class EditPedidoBean implements Serializable {
 		produtos = produtoBean.listar();
 	}
 	
+	//Pegandos os ids dos dois objetos e enviando para o método cadastrar
 	public String cadastrarPedido() throws Exception {
 		pedidoBean.cadastrar(selectedClienteId, selectedProdutosIds);	
 		return "pedidos?faces-redirect=true";

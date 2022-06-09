@@ -19,7 +19,7 @@ public class PedidoBean {
 
 	@PersistenceContext
 	private EntityManager em;
-	
+	//
 	public List<Pedido> listar() {
 		return em.createQuery("SELECT p FROM Pedido p", Pedido.class).getResultList();
 	}
@@ -34,12 +34,13 @@ public class PedidoBean {
 		
 		pedido.setPagamento(pagamento);
 	}
-	
+	//Recebe o id do Pedido, Busca o objeto e exclui da tabela
 	public void excluir(Integer pedidoId) {
 		Pedido pedido = em.find(Pedido.class, pedidoId);
 		em.remove(pedido);
 	}
 	
+	//
 	public void cadastrar(Integer clienteId, Integer[] produtosIds) throws Exception {
 		Cliente cliente = em.find(Cliente.class, clienteId);
 		

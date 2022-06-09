@@ -13,7 +13,7 @@ public class ProdutoBean {
 
 	@PersistenceContext
 	private EntityManager em;
-	
+	//Método que será obtido o select da clase Produto
 	public List<Produto> listar() {
 		return em.createQuery("SELECT p FROM Produto p", Produto.class).getResultList();
 	}

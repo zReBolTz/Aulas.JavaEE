@@ -26,6 +26,7 @@ public class Pagamento implements Serializable {
 	@Column(name = "tipo_pagto", length = 20, nullable = false)
 	private TipoPagamento tipoPagto;
 	
+	//Mappedby= Ele vai determinar irá ser denominado entre as relações
 	@OneToOne(mappedBy = "pagamento")
 	private Pedido pedido;
 	

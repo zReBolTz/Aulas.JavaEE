@@ -17,6 +17,7 @@
 
 <h:form>
 	<h3>Escolha um cliente:</h3>
+	<!-- Select recebendo os ids do Banco de Dados -->
 	<h:selectOneMenu value="#{editPedidoBean.selectedClienteId}">
 		<f:selectItems value="#{editPedidoBean.clientes}" var="c" itemValue="#{c.id}" itemLabel="#{c.nome} (#{c.email})" />
 	</h:selectOneMenu>
@@ -24,6 +25,7 @@
 	<br />
 	
 	<h3>Escolha os produtos:</h3>
+	<!-- Select recebendo os ids dos pedidos -->
 	<h:selectManyCheckbox value="#{editPedidoBean.selectedProdutosIds}" layout="pageDirection">
 		<f:selectItems value="#{editPedidoBean.produtos}" var="p" itemValue="#{p.id}" itemLabel="#{p.nome} - #{formatterBean.formatarMoeda(p.valor)}" />
 	</h:selectManyCheckbox>

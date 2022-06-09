@@ -24,6 +24,7 @@ public class Cliente implements Serializable {
 	private String email;
 	//OneToMany= Colocando a chave estrangeira na tabela
 	
+	//Mappedby= Ele vai determinar irá ser denominado entre as relações
 	@OneToMany(mappedBy = "cliente")
 	private List<Pedido> pedidos;
 

@@ -31,15 +31,15 @@ public class Pedido implements Serializable {
 	@Temporal(TemporalType.DATE)
 	@Column(nullable = false)
 	private Date data;
-
+	
 	@OneToOne
 	@JoinColumn(name = "pagamento_id")
 	private Pagamento pagamento;
-	
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
 	
+	//Criando uma nova tabela, com duas chaves estrangeiras
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "pedido_produto", 
 		joinColumns = @JoinColumn(name = "pedido_id"),
