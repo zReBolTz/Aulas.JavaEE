@@ -12,6 +12,7 @@ public class TarefaBean {
 	@PersistenceContext
 	private EntityManager em;
 	
+	//Métodods relacionados ao Banco de Dados
 	public void inserir(Tarefa tarefa) {
 		em.persist(tarefa);
 	}

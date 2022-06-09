@@ -17,7 +17,7 @@ import br.com.rafaelcosta.jpa.model.Tarefa;
 @Named("form")
 @RequestScoped
 public class FormBean implements Serializable {
-	
+	//EJB Irá fazer a lógica de negócios, ele que irá fazer as conexões do Bean e com outras classes
 	@EJB
 	private TarefaBean tarefaBean;
 
