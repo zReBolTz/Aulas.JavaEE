@@ -32,7 +32,7 @@ public void setTextoInvertido(String textoInvertido) {
  
  
 public String inversao() {
-	
+	//O StringBuilder tem um recurso que consegue inverter a String"StringBuilder().reverser".
 	textoInvertido= new StringBuilder(texto).reverse().toString();
 	return textoInvertido;
 	
