@@ -4,9 +4,8 @@ public class Linguagem {
 	
 	private Integer id;
 	private String nome;
-	
+	//usando o static final, podemos definir que não poderá modificar as informações destá variável 
 	public static final Linguagem [] LINGUAGENS;
-	
 	static {
 		LINGUAGENS = new Linguagem[5];
 		LINGUAGENS[0] = new Linguagem(1, "Java");
