@@ -21,6 +21,7 @@ public class CadastroBean implements Serializable{
 	//linguagens é do tipo Integer pois irá receber a id dos cursos desejados
 	private Integer [] linguagens;
 	
+	//Neste método estamos pegando as informações e sua posições da classe "linguagem"
 	public Linguagem [] getListaLinguagens() {
 		return Linguagem.LINGUAGENS;
 	}
