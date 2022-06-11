@@ -10,6 +10,7 @@ import br.com.senai.WillianFerreira.model.Linguagem;
 @Named("cadastro")
 @RequestScoped
 public class CadastroBean implements Serializable{
+	//atributos do objeto
 	private String nome;
 	private String email;
 	private String senha1;
@@ -17,6 +18,7 @@ public class CadastroBean implements Serializable{
 	private Character sexo;
 	private Boolean receberEmail;
 	private String observacoes;
+	//linguagens é do tipo Integer pois irá receber a id dos cursos desejados
 	private Integer [] linguagens;
 	
 	public Linguagem [] getListaLinguagens() {
