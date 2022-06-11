@@ -12,9 +12,10 @@
 </h:head>
 <body>
 
+	//Formulárion onde o usuário deverá preencher
 	<h:form> 
 		<h:panelGrid columns="2">
-			<f:facet name="header">Cadastro de Usu�rio</f:facet>
+			<f:facet name="header">Cadastro de Usuário</f:facet>
 			
 			Nome:
 			<h:inputText value="#{cadastro.nome}"/>
@@ -22,7 +23,7 @@
 			<h:inputText value="#{cadastro.email}"/>
 			Senha:
 			<h:inputText value="#{cadastro.senha1}"/>
-			Confirma��o de Senha:
+			Confirmação de Senha:
 			<h:inputText value="#{cadastro.senha2}"/>
 			Sexo:
 			<h:selectOneRadio> 
@@ -31,9 +32,11 @@
 			</h:selectOneRadio>
 			Deseja receber e-mail?
 			<h:selectBooleanCheckbox value="#{cadastro.receberEmail}" /> 
-			Observa��es:
+			Observações:
 			<h:inputTextarea value="#{cadastro.observacoes}" rows="4" cols="30"/>
-			Linguagem de programa��o:
+			//Pegando a lista com todos os cursos da classe "cadastroBean"
+			//Após o usuario escolher os cursos desejado, será enviado os ids/posições de onde o nome do curso está alocado
+			Linguagem de programação:
 			<h:selectManyCheckbox value="#{cadastro.linguagens}">
 				<f:selectItems value="#{cadastro.listaLinguagens}" var="l" itemValue="#{l.id}" itemLabel="#{l.nome}" />				
 			</h:selectManyCheckbox>
