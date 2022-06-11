@@ -12,7 +12,7 @@ import br.com.senai.willianFerreira.application.model.Endereco;
 import br.com.senai.willianFerreira.application.model.Estado;
 import br.com.senai.willianFerreira.application.model.Pessoa;
 import br.com.senai.willianFerreira.application.model.Telefone;
-
+//Definindo que a classe poderá ser chamada de "cadastro"
 @Named("cadastro")
 @RequestScoped
 @SuppressWarnings("serial")
@@ -20,8 +20,10 @@ import br.com.senai.willianFerreira.application.model.Telefone;
 public class CadastroBean implements Serializable  {
 
 private Pessoa pessoa;
-
+	//Este método está verificando se já tem algum objeto adicionado no site
+	//Caso for a primeira vez que a página está aberta, não terá nenhum objeto salvo
 	public Pessoa getPessoa() {
+		//Caso o objeto for null, ele fará umka nova instância com o objeto e também com as variáveis compostas
 		if(pessoa==null) {
 			pessoa = new Pessoa();
 			pessoa.setEnderecoResidencial(new Endereco());
