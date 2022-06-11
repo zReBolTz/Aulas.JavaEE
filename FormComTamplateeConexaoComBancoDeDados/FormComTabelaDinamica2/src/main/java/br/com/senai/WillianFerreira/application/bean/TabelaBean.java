@@ -16,7 +16,9 @@ import br.com.senai.WillianFerreira.application.model.Despesas;
 
 @SuppressWarnings("serial") //tira anuncios de advert�ncia
 @Named("tabela")
-@SessionScoped //tempo de vida da p�gina, o "session" mant�m os dados enquanto o navegador estiver aberto
+//tempo de vida da p�gina
+//O "session" mant�m os dados enquanto o navegador estiver aberto
+@SessionScoped 
 public class TabelaBean implements Serializable{
 	//Criando uma Lista com todos os objetos
 	private List<Despesas> despesas = new ArrayList<>();
@@ -180,7 +182,7 @@ public class TabelaBean implements Serializable{
 
 	public String doLogin() {
 		//Fazendo a validação no login e senha
-		if("willian".equals(user) && "admin".equals(senha)) {
+		if("abc".equals(user) && "123".equals(senha)) {
 			return "despesas";	
 		}
 		return null;
