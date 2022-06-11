@@ -5,7 +5,8 @@ import java.sql.Date;
 import javax.inject.Named;
 
 @Named("Pessoa")
-
+//Objeto e seus atributos
+//Aqui teremos um objeto com várias variáveis compostas
 public class Pessoa {
 	String nome;
 	String email;
@@ -18,6 +19,7 @@ public class Pessoa {
 	Telefone telefoneComercial;
 	String cargo;
 	Double salario;
+	//Interesses está recebendo um Integer pois será salvo o id do curso desejado
 	Integer interesses;
 	
 	
