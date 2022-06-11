@@ -17,11 +17,11 @@ public class NumberBean implements Serializable {
 	private Integer qtde;
 	private Integer min;
 	private Integer max;
-	
+	//Lista onde será recebido os numeros aleatórios
 	private List<Integer> numeros = new ArrayList<>();
 
 	public String gerar() {
-		
+		//Caso "i" for menor que "qtde"(valor de numeros aleatórios que o usuário deseja), gerar numeros aleatórios e adicionar na lista
 		for (int i = 0; i < qtde; i++) {
 			int n = random.nextInt(max - min) + min + 1;
 			numeros.add(n);
